@@ -19,8 +19,8 @@ public class ProductService {
     @Autowired
     ProductRepository productRepository;
 
-    public void addNewProduct(Product product) {
-        productRepository.save(product);
+    public Product addNewProduct(Product product) {
+        return productRepository.save(product);
     }
 
     public void softDelete(Long id) {
